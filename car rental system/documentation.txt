@@ -1,0 +1,171 @@
+CAR RENTAL SYSTEM — DOCUMENTATION
+ 1. Introduction
+
+This Java console-based Car Rental System was developed using Object-Oriented Programming (OOP). The system allows customers to register, view cars, rent and return vehicles, and view active rentals.
+
+The program uses four main classes:
+
+Car
+
+Customer
+
+RentalAgency
+
+Main (the console interface)
+
+ 2. Objectives
+
+The goals of this project were:
+
+To apply OOP concepts like encapsulation, classes, and objects.
+
+To create a functional console-based rental system.
+
+To implement interaction using a menu-driven interface.
+
+To manage data using ArrayLists.
+
+ 3. Class Descriptions
+ a) Car Class
+
+Handles car details and availability.
+
+Attributes:
+
+carId
+
+model
+
+brand
+
+pricePerDay
+
+isAvailable
+
+Methods:
+
+Getters (e.g., getCarId(), isAvailable())
+
+setAvailable(boolean)
+
+showCarDetails()
+
+ b) Customer Class
+
+Stores customer data and their rented car.
+
+Attributes:
+
+customerId
+
+name
+
+phone
+
+rentedCar (Car object)
+
+Methods:
+
+Getters
+
+setRentedCar(Car car)
+
+showCustomerDetails()
+
+ c) RentalAgency Class
+
+Manages all rentals, returns, cars, and customers.
+
+Attributes:
+
+ArrayList<Car> cars
+
+ArrayList<Customer> customers
+
+Methods:
+
+addCar(Car car)
+
+addCustomer(Customer customer)
+
+listAvailableCars()
+
+rentCar(String customerId, String carId)
+
+returnCar(String customerId)
+
+listAllRentals()
+
+findCarById(String id)
+
+findCustomerById(String id)
+
+ d) Main Class
+
+Provides the menu and coordinates actions.
+
+Menu Options:
+
+Register Customer
+
+List Available Cars
+
+Rent Car
+
+Return Car
+
+View Rentals
+
+Exit
+
+This class uses Scanner for user input.
+
+ 4. How the System Works (Flow)
+
+1️⃣ Customer registers (Option 1)
+2️⃣ User checks available cars (Option 2)
+3️⃣ Customer rents a car (Option 3)
+4️⃣ Customer returns a car (Option 4)
+5️⃣ View rentals (Option 5)
+6️⃣ Exit app (Option 6)
+
+ 5. Sample Run
+--- Car Rental System ---
+1. Register Customer
+2. List Available Cars
+3. Rent Car
+4. Return Car
+5. View Rentals
+6. Exit
+Choose an option: 1
+Enter Customer ID: U1
+Enter Name: Alvin
+Enter Phone: 0712345678
+Customer registered.
+
+Choose an option: 3
+Enter Customer ID: U1
+Enter Car ID: C1
+Car rented successfully!
+
+ 6. Conclusion
+
+This Car Rental System demonstrates:
+
+Use of classes and objects
+
+Encapsulation of data
+
+ArrayList data management
+
+Console interaction
+
+Separation of concerns using multiple classes
+
+It meets OOP requirements and can be expanded with features like:
+
+Date-based rentals
+
+File storage
+
+Payments
